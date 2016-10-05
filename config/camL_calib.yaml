@@ -1,0 +1,32 @@
+%YAML:1.0
+model_type: MEI
+camera_name: camL
+image_width: 640
+image_height: 480
+mirror_parameters:
+   xi: 1.5571071392433520e+00
+distortion_parameters:
+   k1: -1.7436199044092912e-01
+   k2: 3.1352973483666197e-01
+   p1: 1.1662103962067254e-03
+   p2: -1.3500169414106526e-04
+projection_parameters:
+   gamma1: 4.8377582540234823e+02
+   gamma2: 4.8292176692388506e+02
+   u0: 3.2117358396258714e+02
+   v0: 2.3882204271328058e+02
+   fx: 150
+   fy: 150
+...
+---
+base_line: 0
+R:
+   R_0: 1
+   R_1: 0
+   R_2: 0
+   R_3: 0
+   R_4: 1
+   R_5: 0
+   R_6: 0
+   R_7: 0
+   R_8: 1

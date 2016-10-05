@@ -1,0 +1,42 @@
+############## PLAYING BAGS:
+
+rosbag play /home/user/catkin_ws/src/icars/bagfile/dataECN_17_12_15_PurePursuit_25kmh.bag
+
+roslaunch icars_undistortion_mono icars_undistortion_mono.launch
+
+roslaunch icars_undistortion_mono icars_undistortion_tmp.launch                NOT WORKING
+
+roslaunch icars_undistortion_mono icars_undistortion_mono_fluence.launch       USING DEMO BAG
+
+roslaunch icars_undistortion_mono icars_undistortion_mono_mine.launch          USING CUSTOM TOPICS
+
+roslaunch icars_undistortion_color icars_undistortion_color_mine.launch
+
+catkin_make --pkg icars_undistortion_color
+
+
+
+############## INSPECT TOPICS
+
+
+
+############### USEFUL PATHS:
+
+/home/user/catkin_ws/src/icars/icars_preprocessors/icars_undistortion_mono/launch
+
+
+
+
+################ USEFUL CAM CALIBRATIONS:
+
+%    640x480
+<param name="PathXmlCalibration" type="string" value="$(find zoe)/config/cam_calib/ZOE/20151207_ZOE_mono_stereo/camera_left.yaml" />
+
+%    1280x960
+<param name="PathXmlCalibration" type="string" value="$(find fluence)/config/cam_calib/FLUENCE/2015-10-07_FLUENCE_color_stereo/2015-10-07_FLUENCE_color_camera_left.yaml" />                  
+
+%    640x480
+<param name="PathXmlCalibration" type="string" value="$(find fluence)/config/left_mono_mei_fluence.yaml" />
+
+%    1296x966
+<param name="PathXmlCalibration" type="string" value="$(find icars_undistortion_mono)/config/left_mei.yaml" />

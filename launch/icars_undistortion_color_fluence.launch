@@ -1,0 +1,16 @@
+<launch>
+ <param name="/use_sim_time" type="bool" value="true" />
+    <!-- GLOBAL PARAMETERS -->
+    <node name="icars_undistortion_color_fl" pkg="icars_undistortion_color" type="icars_undistortion_color_node" cwd="node" respawn="true" output="screen" >
+      <remap from="/image" to="/front/left/mono/image_raw" />
+      <remap from="/imageRectified" to="/front/left/mono/image_rectified" />
+      <remap from="/camInfo" to="/front/left/mono/camInfo" />
+      <param name="PublishRectified" type="bool" value="true" />
+      <param name="PathXmlCalibration" type="string" value="$(find fluence)/config/left_mono_mei_fluence.yaml" />
+    </node>
+
+    <node name="imageRectifiedFL" pkg="image_view" type="image_view" respawn="true" output="screen" >
+      <remap from="image" to="/front/left/mono/image_rectified" />
+    </node>
+
+</launch>
